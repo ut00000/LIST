@@ -34,7 +34,7 @@ body {
 
 .progress-bar {
     height: 100%;
-    background-color: #007bff;
+    background-color: #00ff73;
     /* メインカラー */
     border-radius: 20px;
     transition: width 0.3s ease;
@@ -154,7 +154,7 @@ body {
 
 /* ★ 選択された円のスタイル */
 .option-button.selected .option-circle {
-    background-color: #ff9100fa;
+    background-color: #008cfffa;
     /* 選択色 */
 }
 
@@ -201,4 +201,9 @@ body {
 .next-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+h1 {
+    text-align: center;
+    color: #0044fff8;
 }
