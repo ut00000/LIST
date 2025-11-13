@@ -1,0 +1,204 @@
+/* 基本スタイル */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.quiz-container {
+    width: 90%;
+    max-width: 700px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* 進捗バー */
+.progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 20px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    /* メインカラー */
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* --- 質問のスタイル --- */
+.question-block {
+    margin-bottom: 35px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 25px;
+}
+
+.question-block:last-child {
+    border-bottom: none;
+}
+
+/* 質問文 */
+.question-text {
+    font-size: 1.3rem;
+    /* 少し小さく */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* 選択肢コンテナ */
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 6段階の選択肢ボタン */
+.option-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    opacity: 0.5;
+    /* 未選択時は半透明 */
+}
+
+.option-button:hover {
+    transform: scale(1.1);
+}
+
+/* ★ 選択されたボタンのスタイル */
+.option-button.selected {
+    opacity: 1;
+    /* 選択されたら不透明に */
+    transform: scale(1.1);
+    /* 少し大きく */
+}
+
+
+/* 選択肢の円 */
+.option-circle {
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+/* 6段階のサイズと色 */
+.option-button:nth-child(6) .option-circle {
+    width: 50px;
+    height: 50px;
+    border-color: #dc3545;
+}
+
+/* 強く反対 */
+.option-button:nth-child(5) .option-circle {
+    width: 40px;
+    height: 40px;
+    border-color: #fd7e14;
+}
+
+.option-button:nth-child(4) .option-circle {
+    width: 30px;
+    height: 30px;
+    border-color: #ffc107;
+}
+
+.option-button:nth-child(3) .option-circle {
+    width: 30px;
+    height: 30px;
+    border-color: #28a745;
+}
+
+.option-button:nth-child(2) .option-circle {
+    width: 40px;
+    height: 40px;
+    border-color: #28a3a7;
+}
+
+.option-button:nth-child(1) .option-circle {
+    width: 50px;
+    height: 50px;
+    border-color: #007bff;
+}
+
+/* 強く賛成 */
+
+/* ★ 選択された円のスタイル */
+.option-button.selected .option-circle {
+    background-color: #ff9100fa;
+    /* 選択色 */
+}
+
+/* 選択肢の左右のラベル（賛成・反対） */
+.options-container::before,
+.options-container::after {
+    content: attr(data-label);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    padding: 0 15px;
+}
+
+.options-container::after {
+    content: "賛成";
+    color: #dc3545;
+}
+
+.options-container::before {
+    content: "反対";
+    color: #007bff;
+}
+
+/* 次へ/診断するボタン */
+.next-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.next-button:hover {
+    background-color: #0056b3;
+}
+
+/* 無効状態のボタン */
+.next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
