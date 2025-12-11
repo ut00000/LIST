@@ -612,3 +612,305 @@ h1 {
     line-height: 1.6;
     color: #333;
 }
+
+/* --- 点数表示 (数値のみ) のスタイル --- */
+.score-section {
+    margin-bottom: 40px;
+    max-width: 500px;
+    /* 幅を少し狭めて見やすく */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.score-list-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    /* 名前と点数を左右に離す */
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    /* 下線 */
+    font-size: 1.1rem;
+}
+
+.score-item:last-child {
+    border-bottom: none;
+    /* 最後の項目の下線は消す */
+}
+
+.score-name {
+    font-weight: bold;
+    color: #555;
+}
+
+.score-number {
+    font-weight: bold;
+    color: #007bff;
+    /* 点数を青色で強調 */
+    font-size: 1.2rem;
+}
+
+.size {
+    text-align: center;
+}
+
+/* --- マトリックス表 (関わり方) のスタイル --- */
+
+/* スマホでの横スクロール対応 */
+.table-scroll {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.matrix-table {
+    width: 100%;
+    min-width: 800px;
+    /* スマホでもこれ以上の幅で表示し、スクロールさせる */
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: #fff;
+}
+
+/* 枠線 */
+.matrix-table th,
+.matrix-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* ヘッダー周り */
+.top-header {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.corner-header {
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    width: 80px;
+}
+
+.corner-x {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.corner-y {
+    display: block;
+    text-align: left;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+/* 相手のタイプヘッダー色 (上) */
+.type-l-header {
+    background-color: #5c9bd5;
+    color: white;
+    width: 22%;
+}
+
+.type-i-header {
+    background-color: #d49d7a;
+    color: white;
+    width: 22%;
+}
+
+.type-s-header {
+    background-color: #cf9eb7;
+    color: white;
+    width: 22%;
+}
+
+.type-t-header {
+    background-color: #6fa8a1;
+    color: white;
+    width: 22%;
+}
+
+/* 自分のタイプサイドバー色 (左) */
+.type-l-side {
+    background-color: #5c9bd5;
+    color: white;
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.type-i-side {
+    background-color: #d49d7a;
+    color: white;
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.type-s-side {
+    background-color: #cf9eb7;
+    color: white;
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.type-t-side {
+    background-color: #6fa8a1;
+    color: white;
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 効果的/非効果的ラベル */
+.label-good {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    font-size: 0.85rem;
+    writing-mode: vertical-rl;
+    /* 縦書き */
+    padding: 10px 5px;
+    width: 30px;
+}
+
+.label-bad {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    font-size: 0.85rem;
+    writing-mode: vertical-rl;
+    /* 縦書き */
+    padding: 10px 5px;
+    width: 30px;
+}
+
+/* コンテンツ部分 */
+.matrix-table ul {
+    margin: 0;
+    padding-left: 15px;
+    /* リストのインデント */
+    list-style-type: square;
+    /* 四角い点 */
+}
+
+.matrix-table li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* 非効果的の行の背景色 */
+.bg-gray {
+    background-color: #f9f9f9;
+}
+
+/* --- 自分のコミュニケーション・スタイル表 (types.html) --- */
+
+.style-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.style-table th,
+.style-table td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.style-table thead th {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* タイプごとのヘッダー色 */
+.type-header-l {
+    background-color: #5c9bd5;
+    color: white;
+    text-align: center !important;
+}
+
+.type-header-i {
+    background-color: #d49d7a;
+    color: white;
+    text-align: center !important;
+}
+
+.type-header-s {
+    background-color: #cf9eb7;
+    color: white;
+    text-align: center !important;
+}
+
+.type-header-t {
+    background-color: #6fa8a1;
+    color: white;
+    text-align: center !important;
+}
+
+/* 箇条書きのスタイル */
+.style-table ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.style-table li {
+    margin-bottom: 5px;
+}
+
+/* リンクボタンのエリア */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* サブボタン（白抜きボタン） */
+.sub-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.sub-button:hover {
+    background-color: #f0f8ff;
+}
+
+.relation-button {
+    display: block;
+    width: 97%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff9b28;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}

@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                ST
+                <span style="font-size: 200%">ST</span>タイプ
+                <br>
+                <img src="ST.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>STの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>まじめに考える</li>
+                        <li>ものごとを着々と進める</li>
+                        <li>求められるまで意見を言わない</li>
+                        <li>相手の考えや意見を熟考する</li>
+                        <li>雄弁ではない</li>
+                        <li>イエス・ノーをあいまいにする</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>STタイプ</strong>は、常に秩序立った安定した環境を好むため、最適なやり方を自らしっかりと考えて選び、それに沿って一定のペースで仕事を進めます。斬新な発想を内に秘めていることもありますが、積極的に意見を言うタイプではないので、結果的にそれを表に出すタイミングを逸してしまうことも多くあります。<br>
+                    また、対人関係においては、ある程度の距離を保った付き合い方を好み、自分のスタンスを変えなければならない状況に直面すると、柔軟な対応をとれないことがあります。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>ひとりで着々とものごとを進めるだけでなく、意識して周囲を巻き込み、リーダーシップを発揮して成果を目指すことにも挑戦してみましょう</li>
+                    <li>相手や周囲の考えに同調しすぎないで、時には葛藤することもいとわず、積極的に自分の意見を主張してみましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

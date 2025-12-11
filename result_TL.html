@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                TL
+                <span style="font-size: 200%">TL</span>タイプ
+                <br>
+                <img src="TL.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>TLの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>事実に基づいて理路整然と話す</li>
+                        <li>ものごとの細部にこだわる</li>
+                        <li>反論されると反駁する</li>
+                        <li>事実やデータを用いる／求める</li>
+                        <li>自分の考え方に固執する</li>
+                        <li>相手の気持ちや感情に頓着しない</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>TLタイプ</strong>は、ものごとの正確性に重きをおき、確実かつ慎重にものごとを進める傾向があります。どちらかというとひとりを好み、率先してコミュニケーションをとるタイプではありませんが、自分と価値観や興味・関心を同じくする人々には、自らの存在を主張する傾向があります。<br>
+                    また、自分のやり方や考え方に固執してしまう傾向もあり、自分が理解され評価されない状況に直面すると、イライラして周囲へあたってしまうこともあります。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>時には自分の気持ちや思いをオープンにして積極的に他者と関わり、協力・協調しながらものごとを進めるようにしましょう</li>
+                    <li>周囲の人の気持ちや感情にしっかりと耳を傾け、それに配慮した行動をとるようにしましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

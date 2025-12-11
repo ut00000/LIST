@@ -11,13 +11,19 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                <sapan style="font-size: 200%"">LI</sapan>タイプ
-                <img src=" LI.png" width="600" height="400">
+                <span style="font-size: 200%">LI</span>タイプ
             </h1>
 
+            <div class="size" style="margin: 30px 0;">
+                <img src="LI.png" alt="LIタイプグラフ" width="600" height="400" style="max-width: 100%; height: auto;">
+            </div>
+
+            <div id="score-display-area" class="score-section"></div>
             <div class="result-section">
                 <h3 class="result-section-title">このタイプの特徴</h3>
 
@@ -45,14 +51,17 @@
                     <li>ものごとの結論をあまり急ぎすぎずに、再度、事実やデータなどをじっくりと確認し、客観的に考える時間のゆとりを持つようにしましょう</li>
                 </ul>
             </div>
-            <br>
-            <br>
+
+            <br><br>
+
             <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
                 トップに戻る
             </a>
+
         </div>
     </div>
 
+    <script src="main.js"></script>
 
 </body>
 

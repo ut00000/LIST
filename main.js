@@ -196,24 +196,93 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 9. 最終結果の計算とリダイレクト (ロジックは変更なし)
+    // 9. 最終結果の計算とリダイレクト
     function calculateResult() {
+        // 最終スコアを読み込む
         const finalScores = JSON.parse(localStorage.getItem('totalScores'));
 
+        // ★ 同点時の優先順位定義 (数値が小さいほど優先)
+        // A(Lead) > B(Inspire) > C(Synchronize) > D(Think)
+        const priorityOrder = {
+            'A': 1,
+            'B': 2,
+            'C': 3,
+            'D': 4
+        };
+
+        // スコア配列に変換してソート
         const sortedScores = Object.entries(finalScores)
             .map(([type, score]) => ({ type: type, score: score }))
-            .sort((a, b) => b.score - a.score);
+            .sort((a, b) => {
+                // 1. まず点数を比較（高い順）
+                if (b.score !== a.score) {
+                    return b.score - a.score;
+                }
+                // 2. 点数が同じ場合、優先順位を比較（A > B > C > D）
+                return priorityOrder[a.type] - priorityOrder[b.type];
+            });
 
+        // 1番目（メイン）と2番目（サブ）を取得
         const mainGroup = sortedScores[0].type;
         const subGroup = sortedScores[1].type;
 
+        // アルファベットに変換 (例: A->L, B->I)
         const mainType = typeMapping[mainGroup];
         const subType = typeMapping[subGroup];
-        const finalType = mainType + subType;
 
-        localStorage.removeItem('totalScores');
+        const finalType = mainType + subType; // 例: "LI", "LS" など
+
+        // localStorageをクリア
+        //localStorage.removeItem('totalScores');
+
+        // 結果ページへ移動
         window.location.href = `result_${finalType}.html`;
     }
 
     // 【変更点 5】 ページ読み込み時に、現在の進捗（例: q2なら7問回答済みの25%）を反映
     updateProgress();
 });
+
+// ★ 10. 結果ページで点数を表示する処理 (数値のみ版)
+const scoreDisplayArea = document.getElementById('score-display-area');
+
+if (scoreDisplayArea) {
+    // 保存された点数を取得
+    const finalScores = JSON.parse(localStorage.getItem('totalScores'));
+
+    if (finalScores) {
+        // 表示用の名前定義
+        const typeNames = {
+            A: 'L: Lead (リード)',
+            B: 'I: Inspire (インスパイア)',
+            C: 'S: Synchronize (シンクロナイズ)',
+            D: 'T: Think (シンク)'
+        };
+
+        // 点数が高い順に並べ替え
+        const sortedScores = Object.entries(finalScores)
+            .map(([type, score]) => ({ type, score }))
+            .sort((a, b) => b.score - a.score);
+
+        // HTMLを生成 (見出しと点数リスト)
+        let htmlContent = '<h3 class="result-section-title">各タイプの点数</h3><div class="score-list-container">';
+
+        sortedScores.forEach(item => {
+            const typeName = typeNames[item.type];
+
+            htmlContent += `
+                    <div class="score-item">
+                        <span class="score-name">${typeName}</span>
+                        <span class="score-number">${item.score}点</span>
+                    </div>
+                `;
+        });
+        htmlContent += '<p class="score-note">※点数が同じ場合は L → I → S → T の順で優先されます</p>';
+
+        htmlContent += '</div>';
+
+        // 画面に表示
+        scoreDisplayArea.innerHTML = htmlContent;
+    }
+}
+;

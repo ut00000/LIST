@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                LT
+                <span style="font-size: 200%">LT</span>タイプ
+                <br>
+                <img src="LT.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>LTの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>道理で押していく</li>
+                        <li>自説を曲げない</li>
+                        <li>交渉場面で動じない</li>
+                        <li>知的会話を好む</li>
+                        <li>自己中心的である</li>
+                        <li>相手の気持ちや感情に頓着しない</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>LTタイプ</strong>は、自分の意見や考えに自信があり、ものごとの判断においても自らを制御しながら、主観を交えることなく公正に行う傾向があります。ただし、意見の相違や疑問点、理解できない点、相手が間違っていると思う点については、すぐに単刀直入に指摘します。<br>
+                    協働指向が全くないわけではありませんが、他者に対して自分の意見や考えを押しつけてしまうことがあります。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>自分の基準とは異なるものの見方もあることを自覚し、寛容な態度で他者と接するようにしましょう</li>
+                    <li>相手の考えや気持ちに耳を傾けて共感したり、意識的に相手の長所に目を向けて感心したり、相手の立場でものごとを考え、発言するようにしましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

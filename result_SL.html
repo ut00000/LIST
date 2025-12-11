@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                SL
+                <span style="font-size: 200%">SL</span>タイプ
+                <br>
+                <img src="SL.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>SLの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>温厚である</li>
+                        <li>自分のこだわりがある</li>
+                        <li>頑固な一面がある</li>
+                        <li>感情をあまり表に出さない</li>
+                        <li>淡々と作業をこなす</li>
+                        <li>口数が少ない</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>SLタイプ</strong>は、支援的で他者を受容する温厚さと目的意識の高さを兼ね備えており、個人的な感情に配慮しながらも、必要に応じて率直な意見を周囲に伝えるて、高い成果をあげることもできます。<br>
+                    内面には闘争心や簡単に自分の考えややり方を曲げることのない頑固さを秘め、時に周囲の反対を押し切って目標達成に突き進んでしまうことがあります。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>周囲の気持ちや感情にとらわれすぎることなく、時には自分の思ったように自由に行動してみましょう</li>
+                    <li>自分の思いやこだわりだけでものごとを進めていないか、時々冷静に振り返ってみましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

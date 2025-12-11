@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                IT
+                <span style="font-size: 200%">IT</span>タイプ
+                <br>
+                <img src="IT.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>ITの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>ユーモアやジョークを交えて話す</li>
+                        <li>すぐに打ち解ける</li>
+                        <li>プレッシャーに弱い</li>
+                        <li>たとえ話がうまい</li>
+                        <li>正当性を誇示する</li>
+                        <li>遠まわしに非難することがある</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>ITタイプ</strong>は、情熱的かつ豊かな感性で周囲を引きつけると同時に、理性的に状況を判断しながらものごとを進めることもできます。また、「～すべき」といった直接的な表現で指示することは少なく、相手の感情に配慮しながら動機づけ、成果を追求します。<br>
+                    ただし、高い成果を求めすぎる傾向があり、失敗要因が見つかるとイライラして落ち着かなくなり、障害や妨害するものを無理に排除しようとする一面があります。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>感性に訴えるのではなく、論理や客観的事実を持って自分の考えを主張し、周囲をリードすることにも挑戦してみましょう</li>
+                    <li>成果を求めるあまり、周囲の気持ちや感情への共感をおろそかにしていないか、時々意識的にチェックしてみましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

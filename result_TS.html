@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                TS
+                <span style="font-size: 200%">TS</span>タイプ
+                <br>
+                <img src="TS.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>TSの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>何事にも地道に取り組む</li>
+                        <li>ものごとを批判的に捉える</li>
+                        <li>何を考えているのかわかりにくい</li>
+                        <li>自分のこだわりがある</li>
+                        <li>考えすぎるあまり言葉にうまくできない</li>
+                        <li>確信の持てること以外はイエス・ノーを明らかにしない</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>TSタイプ</strong>は、明確な目標に基づいて自らの行動を方法づけ、成果につながる活動に重きをおいて、ひとり黙々と着実にものごとを進めます。また、周囲との関係に頓着しないため、自分の行く手を阻む障害や妨害となる人物には憮然とした態度を示します。<br>
+                    このタイプは、自分の考え方ややり方をかたくなに守るところがあり、他者の異なる意見に耳を貸すことはあっても、受け入れることには消極的になってしまう一面もあります。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>決まった見方だけでなく、意識的にいつもとは異なる視点でものごとを捉え、よいと思う考えは、積極的かつ柔軟に取り入れるようにしましょう</li>
+                    <li>自分の意見や気持ちを積極的にオープンにすることを心がけ、他者の意見に素直に耳を傾けるようにしましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

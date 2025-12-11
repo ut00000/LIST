@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                TI
+                <span style="font-size: 200%">TI</span>タイプ
+                <br>
+                <img src="TI.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>TIの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>感情的な表現を避ける</li>
+                        <li>冷静で理性的な判断をする</li>
+                        <li>熟考しすぎて決断が遅れる</li>
+                        <li>冷静に語りかける</li>
+                        <li>他者の意見を批判的に受け入れる</li>
+                        <li>相手の気持ちや感情を察するのが不得手</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>TIタイプ</strong>は、慎重で論理的であると同時に、必要に応じて優れた話術で周囲に影響力を発揮できるタイプです。普段はあまり感情を表に出すことはありませんが、主張すべきときは熱意を込めて説明したり論じたりします。<br>
+                    ものごとをじっくりと深く掘り下げて考えるとともに、他者の意見についても理性的に受け入れようとしますが、相手の感情の機微を察知するということはあまり得意な領域ではありません。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>冷静な思考や判断ができるのですから、あとは自分の考えや意見を躊躇することなく、その場で明確に伝えるようにしましょう</li>
+                    <li>相手の話にしっかりと耳を傾けるだけでなく、相手の気持ちまでも受け止めるよう心がけましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

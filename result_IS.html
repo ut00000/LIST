@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                IS
+                <span style="font-size: 200%">IS</span>タイプ
+                <br>
+                <img src="IS.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>ISの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>相手の気持ちや感情に訴える</li>
+                        <li>周囲を勇気づけ、元気づける</li>
+                        <li>ネガティブな評価を避ける</li>
+                        <li>身振り手振りを交えて伝える</li>
+                        <li>話が発散的になる</li>
+                        <li>主観にとらわれる</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>ISタイプ</strong>は、外交的であると同時に保守的な一面を持ち合わせています。自分の思ったことや感じたことを率直に相手に伝えますが、そのメッセージには温かみを感じます。また、周囲への気配りができ、自分を必要とする人に対しては、何とか役に立とうと振る舞います。<br>
+                    また、慣れ親しんだ考え方や行動、場を重視する傾向があり、変革を必要とする場面では、決断が遅れてしまうこともあります。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>人の情や価値観などにとらわれすぎないよう、ものごとを冷静に見つめ、論理的な判断を常に心がけましょう</li>
+                    <li>周囲との調和も大切ですが、時には自分の考えを積極的に主張して、主導権を握ってその場をリードすることにも挑戦してみましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>

@@ -11,24 +11,54 @@
 <body>
     <div class="quiz-container">
         <div id="result-area">
+
             <h2>診断結果</h2>
             <p>あなたのタイプは...</p>
+
             <h1 style="font-size: 4rem; color: #007bff; margin: 10px 0;">
-                SI
+                <span style="font-size: 200%">SI</span>タイプ
+                <br>
+                <img src="SI.png" width="550" height="350" style="max-width: 100%; height: auto;">
             </h1>
 
-            <h3>SIの特徴</h3>
-            <p style="text-align: left; line-height: 1.7;">
-                （ここに、メインタイプがLで、サブタイプがIだった人向けの特徴や説明文を自由記述します）
-                <br><br>
+            <div id="score-display-area" class="score-section"></div>
+            <div class="result-section">
+                <h3 class="result-section-title">このタイプの特徴</h3>
 
+                <div class="feature-box">
+                    <ul class="feature-list-grid">
+                        <li>明朗である</li>
+                        <li>相手の話をじっくり聴く</li>
+                        <li>相手に配慮した行動をとる</li>
+                        <li>同調しすぎる</li>
+                        <li>議論を避ける</li>
+                        <li>自分から主張しない</li>
+                    </ul>
+                </div>
 
-                <br>
-                <a href="q1.html" class="next-button" style="text-decoration: none; text-align: left;">
-                    もう一度診断する
-                </a>
+                <p class="result-description-text">
+                    <strong>SIタイプ</strong>は、穏やかで誰にでも共感的な態度で接し、周囲に安心感を与えます。また、調和を保つことに重きをおき、人間関係がしっくりいかない場面では、潤滑油としての役割を果たそうとします。一方で、緊張やストレス場面を避けようとするあまり、自分の主張をすぐにおろしてしまうこともあります。<br>
+                    人から受け入れられたいという欲求も強く、頼まれるとなかなかノーと言えずに悩んだり、仕事を抱え込んだりすることがあります。
+                </p>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-section-title">啓発のポイント</h3>
+                <ul class="advice-list">
+                    <li>周囲の思惑や関係にとらわれすぎずに、自分の意見を積極的に主張することにも挑戦してみましょう</li>
+                    <li>事実や客観的データを積み上げながら、じっくりと筋道を立てて考えることを意識的に行いましょう</li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <a href="index.html" class="next-button" style="text-decoration: none; text-align: center;">
+                トップに戻る
+            </a>
         </div>
     </div>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>
