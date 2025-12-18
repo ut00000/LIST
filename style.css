@@ -259,12 +259,12 @@ body {
 }
 
 .options-container::after {
-    content: "賛成";
+    content: "はい";
     color: #dc3545;
 }
 
 .options-container::before {
-    content: "反対";
+    content: "いいえ";
     color: #007bff;
 }
 
