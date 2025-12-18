@@ -909,6 +909,7 @@ h1 {
 
 /* --- リンクボタンのエリア（横並び修正版） --- */
 /* --- リンクボタンエリア（横並び・同じ長さ） --- */
+/* --- リンクボタンエリア（青背景・白文字に統一） --- */
 .nav-links {
     display: flex;
     justify-content: center;
@@ -919,31 +920,46 @@ h1 {
     /* スマホで画面が狭いときは自動で縦になる */
     margin-top: 30px;
     padding-bottom: 40px;
-    /* 下に少し余白 */
 }
 
 /* ボタンの共通設定 */
 .nav-links .sub-button,
 .nav-links .next-button {
     width: 280px;
-    /* ★ここで幅を固定して長さを揃える */
+    /* 幅を固定して揃える */
     min-width: auto;
-    /* 以前の設定をリセット */
     max-width: 100%;
-    /* スマホではみ出さないように */
 
     display: flex;
-    /* 文字をど真ん中に配置 */
     justify-content: center;
     align-items: center;
 
-    padding: 12px 10px;
-    /* 上下12px, 左右10px */
+    padding: 15px 10px;
+    /* ボタンの厚みを少し増やす */
     margin: 0;
-    /* 余計なマージンを削除 */
     box-sizing: border-box;
-    /* 枠線を含めたサイズ計算 */
     text-align: center;
+    text-decoration: none;
+    /* 下線を消す */
+    font-weight: bold;
+    border-radius: 8px;
+    /* 角を少し丸く */
+
+    /* ★ここを青背景・白文字に変更 */
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    /* 枠線はなし */
+    transition: background-color 0.3s ease;
+}
+
+/* ホバー時（マウスを乗せたとき）のデザイン */
+.nav-links .sub-button:hover,
+.nav-links .next-button:hover {
+    background-color: #0056b3;
+    /* 少し濃い青になる */
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* --- マトリックス図 (最終修正版V3) のスタイル --- */
